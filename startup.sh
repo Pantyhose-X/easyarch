@@ -41,7 +41,7 @@ filesystem () {
 # btrfs and ext4. Others will be added in future.
 echo -ne "
     Please Select your file system for both boot and root
-    1)      btrfs
+    1)      btrfs (recommended)
     2)      ext4
     3)      luks with btrfs
     0)      exit
@@ -78,7 +78,7 @@ esac
 keymap () {
 # These are default key maps as presented in official arch repo archinstall
 echo -ne "
-Please select key board layout from this list
+Please select keyboard layout from this list
     -by
     -ca
     -cf
@@ -108,7 +108,7 @@ Please select key board layout from this list
     -us
 
 "
-read -p "Your key boards layout:" keymap
+read -p "Your keyboards layout:" keymap
 set_option KEYMAP $keymap
 }
 
@@ -138,7 +138,7 @@ echo -ne "
     after formating your disk there is no way to get data back      
 ------------------------------------------------------------------------
 
-Please enter full path to disk: (example /dev/sda, not sda):
+Please enter full path to disk: (example /dev/sda, not sda or /sda):
 "
 read option
 echo "DISK=$option" >> setup.conf
