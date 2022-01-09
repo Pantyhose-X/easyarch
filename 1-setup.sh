@@ -165,6 +165,7 @@ if [ $(whoami) = "root"  ]; then
     echo "$USERNAME:$PASSWORD" | chpasswd
 	cp -R /root/easyarch /home/$USERNAME/
     chown -R $USERNAME: /home/$USERNAME/easyarch
+    chmod +x /home/$USERNAME/easyarch/2-user.sh
 # enter $nameofmachine to /etc/hostname
 	echo $nameofmachine > /etc/hostname
 else
