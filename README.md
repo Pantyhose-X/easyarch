@@ -6,5 +6,6 @@ the main thing i changed was to make the UEFI partition 2G instead of 300M.
 pacman -Sy git
 git clone https://github.com/F1uk369/easyarch/
 cd easyarch
+chmod +x easyarch.sh
 ./easyarch.sh
 ```
