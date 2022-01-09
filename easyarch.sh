@@ -17,14 +17,14 @@ echo -ne "
 ----------------------------------------------------------------------------------------
                             Automated Arch Linux Installer
 ----------------------------------------------------------------------------------------
-                        Scripts are in directory named ArchTitus
+                        Scripts are in directory named easyarch
 "
     bash startup.sh
     source $SCRIPT_DIR/setup.conf
     bash 0-preinstall.sh
-    arch-chroot /mnt /root/ArchTitus/1-setup.sh
-    arch-chroot /mnt /usr/bin/runuser -u $username -- /home/$username/ArchTitus/2-user.sh
-    arch-chroot /mnt /root/ArchTitus/3-post-setup.sh
+    arch-chroot /mnt /root/easyarch/1-setup.sh
+    arch-chroot /mnt /usr/bin/runuser -u $username -- /home/$username/easyarch/2-user.sh
+    arch-chroot /mnt /root/easyarch/3-post-setup.sh
 
 echo "-------------------------------------------------------------------------"
 cat << "EOF"
