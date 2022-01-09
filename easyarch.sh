@@ -22,7 +22,11 @@ echo -ne "
     bash startup.sh
     source $SCRIPT_DIR/setup.conf
     bash 0-preinstall.sh
+    arch-chroot /mnt chmod +x /root/easyarch/1-setup.sh
+    arch-chroot /mnt chmod +x /root/easyarch/2-user.sh
+    arch-chroot /mnt chmod +x /root/easyarch/3-post-setup.sh
     arch-chroot /mnt /root/easyarch/1-setup.sh
+    arch-chroot /mnt chmod +x /home/$username/easyarch/2-user.sh
     arch-chroot /mnt /usr/bin/runuser -u $username -- /home/$username/easyarch/2-user.sh
     arch-chroot /mnt /root/easyarch/3-post-setup.sh
 
